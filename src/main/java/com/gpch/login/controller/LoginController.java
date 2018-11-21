@@ -67,6 +67,21 @@ public class LoginController {
         modelAndView.setViewName("admin/home");
         return modelAndView;
     }
-
+    
+    
+    @RequestMapping(value="/access-denied", method = RequestMethod.GET)
+    public ModelAndView denegado(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("access-denied");
+        return modelAndView;
+    }
+    
+    
+    @RequestMapping(value="/index", method = RequestMethod.GET)
+    public ModelAndView inicio(){
+    	ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("index");
+        return modelAndView;
+    }
 
 }

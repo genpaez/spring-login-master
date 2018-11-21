@@ -3,7 +3,7 @@
       xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>Spring Security Tutorial</title>
+    <title>Asistente Conectividad</title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -11,23 +11,27 @@
 </head>
 
 <body>
-<form th:action="@{/registration}" method="get">
-    <button class="btn btn-md btn-warning btn-block" type="Submit">Go To Registration Page</button>
-</form>
+		<nav class="navbar navbar-default" style="background-color: #EBE7EC" align="center">
+		    <div  class="container" style="background-color: #EBE7EC">
+		        <div class="navbar-header" id="nav">
+		            <a class="navbar-brand"  style="color:#770e77;font-size:20px" href="#"> <strong>Asistente Conectividad</strong> </a>
+		        </div>
+		    </div>
+		</nav>
 
 <div class="container">
-    <img th:src="@{/images/login.jpg}" class="img-responsive center-block" width="300" height="300" alt="Logo"/>
+    <img src="http://grupooesia.com/wp-content/uploads/2015/11/logo_oesia_011.png" class="img-responsive center-block" width="140" height="80" alt="Oesía Networks Colombia"/>
     <form th:action="@{/login}" method="POST" class="form-signin">
-        <h3 class="form-signin-heading" th:text="Welcome"></h3>
+        <h3 class="form-signin-heading" th:text="Bienvenido"></h3>
         <br/>
 
         <input type="text" id="email" name="email" th:placeholder="Email"
                class="form-control"/> <br/>
-        <input type="password" th:placeholder="Password"
+        <input type="password" th:placeholder="Contraseña"
                id="password" name="password" class="form-control"/> <br/>
 
         <div align="center" th:if="${param.error}">
-            <p style="font-size: 20; color: #FF1C19;">Email or Password invalid, please verify</p>
+            <p style="font-size: 20; color: #FF1C19;">Usuario o contraseña inválido, por favor verifique!</p>
         </div>
         <button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit"
                 th:text="Login"></button>
